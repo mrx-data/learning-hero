@@ -1,0 +1,97 @@
+# Java开发相关
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.log
+
+# Maven构建工具相关
+target/
+.m2/repository/
+.m2/wrapper/
+.m2/wrapper-dists/
+settings.xml
+
+# IDE和编辑器相关
+.idea/
+*.iml
+*.ipr
+*.iws
+*.ids
+*.bak
+*.swp
+*~.nib
+.project
+.classpath
+.settings/
+.vscode/
+.trae/
+*.code-workspace
+
+# 前端开发相关
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+
+# 环境配置文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 操作系统相关
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# 日志文件
+logs/
+*.log.*
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.temp
+*.pid
+
+# 打包文件
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 敏感信息
+*.pem
+*.key
+*.crt
+credentials.json
+secrets.json
+
+# 数据库文件
+*.db
+*.sqlite
+*.sql.bak
+
+# 测试覆盖率报告
+coverage/
+*.lcov
+.nyc_output/
+
+# 文档生成
+docs/_build/
+site/
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar

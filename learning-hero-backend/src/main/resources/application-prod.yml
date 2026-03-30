@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    url: ${SUPABASE_DB_URL}
+    username: ${SUPABASE_DB_USERNAME}
+    password: ${SUPABASE_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:20}
+      minimum-idle: ${DB_POOL_MIN_IDLE:5}
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.learninghero.entity
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+supabase:
+  url: ${SUPABASE_URL}
+  anon-key: ${SUPABASE_ANON_KEY}
+  storage:
+    bucket: ${SUPABASE_STORAGE_BUCKET:learning-hero}
+
+wechat:
+  miniapp:
+    app-id: ${WECHAT_APP_ID}
+    app-secret: ${WECHAT_APP_SECRET}
+    api-url: ${WECHAT_API_URL:https://api.weixin.qq.com}
+
+ai:
+  deepseek:
+    api-url: ${DEEPSEEK_API_URL:https://api.deepseek.com/v1/chat/completions}
+    api-key: ${DEEPSEEK_API_KEY}
+    model: ${DEEPSEEK_MODEL:deepseek-chat}
+    max-tokens: ${DEEPSEEK_MAX_TOKENS:4096}
+    temperature: ${DEEPSEEK_TEMPERATURE:0.7}
+    timeout: ${DEEPSEEK_TIMEOUT:30000}
+
+business:
+  question:
+    default-count: ${QUESTION_DEFAULT_COUNT:10}
+    max-count: ${QUESTION_MAX_COUNT:20}
+    min-count: ${QUESTION_MIN_COUNT:5}
+    time-limit: ${QUESTION_TIME_LIMIT:30}
+  difficulty:
+    easy-score: ${DIFFICULTY_EASY_SCORE:10}
+    medium-score: ${DIFFICULTY_MEDIUM_SCORE:15}
+    hard-score: ${DIFFICULTY_HARD_SCORE:20}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION:86400000}

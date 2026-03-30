@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: learning-hero
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    display-request-duration: true
+    display-operation-id: false
+    deep-linking: true
+    default-models-expand-depth: 1
+    default-model-expand-depth: 1
+  packages-to-scan: com.learninghero.controller
+  paths-to-match: /api/**
+  default-flat-param-object: true
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+    com.learninghero: ${APP_LOG_LEVEL:DEBUG}
